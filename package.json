@@ -1,0 +1,132 @@
+{
+    "author": "sss6001mk2sr@gmail.com",
+    "dependencies": {},
+    "keywords": [],
+    "name": "wfs1",
+    "pebble": {
+        "capabilities": [
+            "location",
+            "health"
+        ],
+        "displayName": "wfS1",
+        "enableMultiJS": true,
+        "messageKeys": [
+            "KEY_WEATHER",
+            "KEY_TEMPERATURE",
+            "KEY_WEATHER_ID",
+            "KEY_WEATHER_ICON"
+        ],
+        "projectType": "native",
+        "resources": {
+            "media": [
+                {
+                    "characterRegex": "[0-9:A-Za-z\u00b0 ]",
+                    "file": "fonts/Code 8x8.ttf",
+                    "name": "FONT_CODE8x8_40",
+                    "targetPlatforms": null,
+                    "type": "font"
+                },
+                {
+                    "characterRegex": "[0-9:A-Za-z\u00b0 ]",
+                    "file": "fonts/Code 8x8.ttf",
+                    "name": "FONT_CODE8x8_20",
+                    "targetPlatforms": null,
+                    "type": "font"
+                },
+                {
+                    "file": "data/test.png",
+                    "name": "IMAGE_TEST",
+                    "targetPlatforms": null,
+                    "type": "raw"
+                },
+                {
+                    "file": "data/50.png",
+                    "name": "IMAGE_WEATHER_ICON_50",
+                    "targetPlatforms": null,
+                    "type": "raw"
+                },
+                {
+                    "file": "data/13.png",
+                    "name": "IMAGE_WEATHER_ICON_13",
+                    "targetPlatforms": null,
+                    "type": "raw"
+                },
+                {
+                    "file": "data/11.png",
+                    "name": "IMAGE_WEATHER_ICON_11",
+                    "targetPlatforms": null,
+                    "type": "raw"
+                },
+                {
+                    "file": "data/10.png",
+                    "name": "IMAGE_WEATHER_ICON_10",
+                    "targetPlatforms": null,
+                    "type": "raw"
+                },
+                {
+                    "file": "data/09.png",
+                    "name": "IMAGE_WEATHER_ICON_09",
+                    "targetPlatforms": null,
+                    "type": "raw"
+                },
+                {
+                    "file": "data/04.png",
+                    "name": "IMAGE_WEATHER_ICON_04",
+                    "targetPlatforms": null,
+                    "type": "raw"
+                },
+                {
+                    "file": "data/03.png",
+                    "name": "IMAGE_WEATHER_ICON_03",
+                    "targetPlatforms": null,
+                    "type": "raw"
+                },
+                {
+                    "file": "data/02.png",
+                    "name": "IMAGE_WEATHER_ICON_02",
+                    "targetPlatforms": null,
+                    "type": "raw"
+                },
+                {
+                    "file": "data/01.png",
+                    "name": "IMAGE_WEATHER_ICON_01",
+                    "targetPlatforms": null,
+                    "type": "raw"
+                },
+                {
+                    "file": "data/69converted.png",
+                    "name": "IMAGE_SP69",
+                    "targetPlatforms": null,
+                    "type": "raw"
+                },
+                {
+                    "file": "data/671converted.png",
+                    "name": "IMAGE_SP671",
+                    "targetPlatforms": null,
+                    "type": "raw"
+                },
+                {
+                    "file": "data/64converted.png",
+                    "name": "IMAGE_SP64",
+                    "targetPlatforms": null,
+                    "type": "raw"
+                },
+                {
+                    "file": "data/61converted.png",
+                    "name": "IMAGE_SP61",
+                    "targetPlatforms": null,
+                    "type": "raw"
+                }
+            ]
+        },
+        "sdkVersion": "3",
+        "targetPlatforms": [
+            "basalt"
+        ],
+        "uuid": "25679cc0-6150-43a8-abe3-0670fea24157",
+        "watchapp": {
+            "watchface": true
+        }
+    },
+    "version": "1.0.0"
+}
