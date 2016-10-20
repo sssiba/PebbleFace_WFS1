@@ -7,7 +7,6 @@ static GBitmap *s_bmpWICON;
 // BEGIN AUTO-GENERATED UI CODE; DO NOT MODIFY
 static Window *s_window;
 static GFont s_res_gothic_18_bold;
-static GFont s_res_font_code8x8_20;
 static BitmapLayer *s_lyrBmpBG;
 static Layer *s_lyrHands;
 static TextLayer *s_lyrTxtTimeShadow;
@@ -17,8 +16,6 @@ static TextLayer *s_lyrTxtDate;
 static TextLayer *s_lyrTxtWeatherShadow;
 static TextLayer *s_lyrTxtWeather;
 static BitmapLayer *s_lyrBmpWeather;
-static TextLayer *s_lyrTxtHealthShadow;
-static TextLayer *s_lyrTxtHealth;
 
 static void initialise_ui(void) {
   s_window = window_create();
@@ -28,7 +25,6 @@ static void initialise_ui(void) {
   #endif
   
   s_res_gothic_18_bold = fonts_get_system_font(FONT_KEY_GOTHIC_18_BOLD);
-  s_res_font_code8x8_20 = fonts_load_custom_font(resource_get_handle(RESOURCE_ID_FONT_CODE8x8_20));
   // s_lyrBmpBG
   s_lyrBmpBG = bitmap_layer_create(GRect(0, 0, 144, 168));
   bitmap_layer_set_background_color(s_lyrBmpBG, GColorBlack);
@@ -86,21 +82,6 @@ static void initialise_ui(void) {
   // s_lyrBmpWeather
   s_lyrBmpWeather = bitmap_layer_create(GRect(1, 33, 32, 32));
   layer_add_child(window_get_root_layer(s_window), (Layer *)s_lyrBmpWeather);
-  
-  // s_lyrTxtHealthShadow
-  s_lyrTxtHealthShadow = text_layer_create(GRect(2, 148, 144, 20));
-  text_layer_set_background_color(s_lyrTxtHealthShadow, GColorClear);
-  text_layer_set_text(s_lyrTxtHealthShadow, "Text layer");
-  text_layer_set_font(s_lyrTxtHealthShadow, s_res_font_code8x8_20);
-  layer_add_child(window_get_root_layer(s_window), (Layer *)s_lyrTxtHealthShadow);
-  
-  // s_lyrTxtHealth
-  s_lyrTxtHealth = text_layer_create(GRect(0, 146, 144, 20));
-  text_layer_set_background_color(s_lyrTxtHealth, GColorClear);
-  text_layer_set_text_color(s_lyrTxtHealth, GColorWhite);
-  text_layer_set_text(s_lyrTxtHealth, "Text layer");
-  text_layer_set_font(s_lyrTxtHealth, s_res_font_code8x8_20);
-  layer_add_child(window_get_root_layer(s_window), (Layer *)s_lyrTxtHealth);
 }
 
 static void destroy_ui(void) {
@@ -114,9 +95,6 @@ static void destroy_ui(void) {
   text_layer_destroy(s_lyrTxtWeatherShadow);
   text_layer_destroy(s_lyrTxtWeather);
   bitmap_layer_destroy(s_lyrBmpWeather);
-  text_layer_destroy(s_lyrTxtHealthShadow);
-  text_layer_destroy(s_lyrTxtHealth);
-  fonts_unload_custom_font(s_res_font_code8x8_20);
 }
 // END AUTO-GENERATED UI CODE
 
@@ -193,6 +171,7 @@ static void tick_handler(struct tm *tick_time, TimeUnits units_changed)
   text_layer_set_text(s_lyrTxtDate, s_date_buffer);
   text_layer_set_text(s_lyrTxtDateShadow, s_date_buffer);
   
+#if 0  
   //health
   HealthValue step = health_service_sum_today( HealthMetricStepCount );
   HealthValue active = health_service_sum_today( HealthMetricActiveSeconds );
@@ -205,7 +184,7 @@ static void tick_handler(struct tm *tick_time, TimeUnits units_changed)
           );
   text_layer_set_text( s_lyrTxtHealth, health );
   text_layer_set_text( s_lyrTxtHealthShadow, health );
-    
+#endif    
 }
 
 

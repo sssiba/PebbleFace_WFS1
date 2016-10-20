@@ -34,12 +34,6 @@
                     "type": "font"
                 },
                 {
-                    "file": "data/test.png",
-                    "name": "IMAGE_TEST",
-                    "targetPlatforms": null,
-                    "type": "raw"
-                },
-                {
                     "file": "data/50.png",
                     "name": "IMAGE_WEATHER_ICON_50",
                     "targetPlatforms": null,
